@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
 import FileIcon from "./FileIcon";
 import Icon from "./Icon";
-import ContextMenu from "./ContextMenu";
+// import ContextMenu from "./ContextMenu";
 
 const FileRowContainer = styled.div`
   display: flex;
