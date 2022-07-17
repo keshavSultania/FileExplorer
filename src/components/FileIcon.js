@@ -8,7 +8,8 @@ const extensionToIconNameMap = {
   css: "css",
   less: "less",
   scss: "scss",
-  json: "json"
+  json: "json",
+  jsx: "react"
 };
 
 const IconImage = styled.div`

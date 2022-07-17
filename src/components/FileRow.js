@@ -7,6 +7,7 @@ import ContextMenu from "./ContextMenu";
 const FileRowContainer = styled.div`
   display: flex;
   align-items: center;
+  user-select: none;
   justify-content: space-between;
   height: auto;
   width: 100%;
@@ -19,6 +20,7 @@ const FileRowContainer = styled.div`
   `}
   &:hover {
     color: white;
+    background-color: rgb(52, 52, 52);
   }
 `;
 
@@ -58,15 +60,14 @@ const FileRow = ({ name, nestLevel = 0, isExpanded = false }) => {
     });
   };
 
-  const handleRenameClick = () => {
-    console.log("renamed");
+  const handleRenameClick = (e) => {
+    e.stopPropagation();
     setIsRename((prev) => !prev);
   };
 
-  const handleInputKeyPress = (event) => {
-    if (event.key === "Enter") {
-      console.log("enter press here! ");
-      handleRenameClick();
+  const handleInputKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleRenameClick(e);
     }
   };
 
@@ -86,13 +87,14 @@ const FileRow = ({ name, nestLevel = 0, isExpanded = false }) => {
           {isRename && (
             <StyledInput
               value={filename}
+              onClick={(e) => e.stopPropagation()}
               onChange={(e) => setFilename(e.target.value)}
               onKeyPress={handleInputKeyPress}
             />
           )}
         </div>
         {isHover && !isRename && (
-          <Icon onClick={() => handleRenameClick()} type="edit" />
+          <Icon color={"#999999"} onClick={handleRenameClick} type="edit" />
         )}
       </FileRowContainer>
     </>

@@ -36,6 +36,9 @@ const Icon = ({
   return (
     <svg
       width={`${size}px`}
+      style={{
+        zIndex: 1
+      }}
       onClick={onClick}
       height={`${size}px`}
       xmlns="http://www.w3.org/2000/svg"

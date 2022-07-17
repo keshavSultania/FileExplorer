@@ -5,7 +5,9 @@ import styled from "styled-components";
 import ContextMenu from "./ContextMenu";
 
 const Wrapper = styled.div`
-  background-color: rgb(52, 52, 52);
+  /* background-color: rgb(52, 52, 52); */
+  /* background-color: rgb(4, 4, 4); */
+  background-color: #151515;
   height: auto;
   width: 300px;
   padding: 4px;
