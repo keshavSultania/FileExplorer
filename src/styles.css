@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.App {
+  font-family: "Roboto", sans-serif;
+  /* text-align: center; */
+}
+
+body {
+  /* background: rgb(52, 52, 52); */
+}
